@@ -1,0 +1,205 @@
+<!-- This website template is designed by Stephen McKean and based off of materials and ideas from w3schools.com -->
+<!DOCTYPE html>
+<html lang="en">
+<title>Allison Cruikshank</title> <!-- Put your name here. This title will be your website's tab label -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Allison Cruikshank, Mathematical biology, Duke University, etc"> <!-- These are words that help search engines find your webpage -->
+<link rel="canonical" href="https://services.math.duke.edu/~ac758"> <!-- Edit this link so that it points to your personal web address -->
+<link rel="stylesheet" href="style.css"> <!-- Make sure you have "style.css" in your public_html directory -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="favicon.ico"> <!-- Make sure you have "favicon.ico" in your public_html directory. This is the Duke logo that shows up on your website's tab -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- Some people block javascript on their browser. This only affects the mobile version of the menu, as well as the abstract toggle feature -->
+<script>
+  
+// Used to toggle abstracts in the research section
+$(document).ready(function(){
+  $('.absbutton').click(function(){
+  var id = $(this).attr("id");
+    $('#abs-' + id).slideToggle('fast');
+  });
+});
+</script>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-prussian w3-card">
+    <a class="w3-bar-item w3-button w3-prussian w3-hover-skyblue w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:;" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-goldleaf w3-hover-skyblue w3-button w3-padding-large" href="https://services.math.duke.edu/~ac758/" ><strong>Allison Cruikshank</strong></a> <!-- Edit this link, and put your name here. This will appear on the navigation bar -->
+    <a class="w3-bar-item w3-hover-skyblue w3-button w3-padding-large w3-hide-small" href="#research">Research</a>     
+    <a class="w3-bar-item w3-hover-skyblue w3-button w3-padding-large w3-hide-small" href="#teaching">Teaching</a>
+    <a class="w3-padding-large w3-button w3-hover-goldleaf w3-hide-small w3-right" href="CV_Main.pdf"><i class="fa fa-file-text"></i> CV</a> <!-- Edit this link, and make sure you have your CV in your public_html directory -->
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-prussian w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a class="w3-bar-item w3-hover-skyblue w3-button w3-padding-large" onclick="myFunction()" href="#research">Research</a>
+  <a class="w3-bar-item w3-hover-skyblue w3-button w3-padding-large" onclick="myFunction()" href="#teaching">Teaching</a>
+  <a class="w3-bar-item w3-hover-skyblue w3-button w3-padding-large" onclick="myFunction()" href="Cruikshank_24.pdf"><i class="fa fa-file-text"></i> CV</a> <!-- Edit this link, and make sure you have your CV in your public_html directory -->
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px">
+
+  <!-- About me -->
+  <div class="w3-container w3-padding-16 w3-content w3-center" style="max-width:1000px;margin-top:46px;margin-bottom:32px">
+    <div class="w3-row">
+      <div class="w3-leftbox">
+      <h2 class="w3-wide">About Me</h2>
+        <p class="w3-left-align">
+        I am a fourth-year PhD candidate in mathematics at <a href="https://math.duke.edu">Duke</a>.
+        Previously, I was an undergraduate at University of Nebraska-Lincoln where I earned a Bachelor of Science in Mathematics and Biochemistry.
+        I study mathematical biology and am interested in the mathematical modeling of human physiological processes to answer and inform questions in medicine. I plan to obtain a career in the biotech/pharmaceutical industry after graduation and am interested in PK/PD and QSP modeling for drug development.
+        </p>
+        <p class="w3-left-align">
+        I grew up Columbus, Nebraska and graduated from a high school in Lincoln, Nebraska.
+        In my spare time, I enjoy running, reading, and spending time with my family.
+      </p>
+      <p class="w3-left-align">
+      <!-- To keep robots from bothering you, you can hide your email address as done below. I learned this trick from Marc Haerkoenen -->
+      <!-- If your email address is "spicy@chicken.nuggets.edu", change the following line accordingly: -->
+        <strong>Email:</strong> <a data-name="allison.cruikshank" data-domain="duke" data-tld="edu" href="#" class="cryptedmail" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld"></a><br>
+        <strong>Office:</strong> Gross Hall 304
+        </p>
+      </div>
+      <div class="w3-rightbox">
+        <img class="w3-round w3-margin-top w3-margin-bottom" alt="me" style="width:90%" src="IMG_6090.jpg" > <!-- Edit this link. You'll need a picture of yourself in your public_html directory, and you'll have to change "PHOTO.jpg" to the file name of your picture -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Research -->
+  <div class="w3-container w3-padding-48 w3-content w3-center" style="max-width:1000px" id="research">
+  <h2 class="w3-wide">Research</h2>
+  <p class="w3-left-align">
+  Currently, I am focusing on two biological systems: sex differences in oxidative stress management and interactions between neurotransmitters in the brain and their implications in neurological diseases. In these projects I work with systems of ordinary differential equations to model the biochemistry of liver metabolism and neurotrasmitter synthesis, respectively. These dynamical systems offer insight into compelling mathematical questions, such as periodic forcing within nonlinear ordinary differential equations, while also being instrumental in analyzing and addressing biological questions.
+   <h2 class="w3-left-align">Publications </h2>
+     <h3 class="w3-left-align">Graduate Work </h3>
+
+  </p>
+    <ol >
+
+      <li><p class="w3-left-align">
+               [2024] Sergio Mena, Allison Cruikshank, Janet Best, H. Frederick Nijhout, Michael C. Reed, Parastoo Hashemi.
+       "Modulation of Serotonin Transporter Expression by Escitalopram under Inflammation; Implications for SSRI Effectiveness." <i> Communications Biology. </i> <a href="https://doi.org/10.1038/s42003-024-06240-3">https://doi.org/10.1038/s42003-024-06240-3</a>.
+        <li><p class="w3-left-align">
+        [2024] Allison Cruikshank, Michael C. Reed, H. Frederick Nijhout. "Sex Differences in 
+        Glutathione Metabolism and Acetaminophen Toxicity." <i> Metabolism and Target Organ Damage. </i> <a href="https://doi.org/10.20517/mtod.2023.44">https://doi.org/10.20517/mtod.2023.44</a>.
+          <li><p class="w3-left-align">
+     [2024] Anna Marie Buchanan, Sergio Mena, Iman Choukari, Aditya Vasa, Jesseca N. Crawford, Jim Fadel, Nick Maxwell, Lawrence Reagan, Allie Cruikshank, Janet Best, H. Frederick Nijhout, Michael Reed, Parastoo Hashemi.
+     "Serotonin as a Biomarker of Toxin-Induced Parkinsonian." <i> Molecular Medicine. </i> <a href = "https://doi.org/10.1186/s10020-023-00773-9">https://doi.org/10.1186/s10020-023-00773-9</a>.
+     <li><p class="w3-left-align">
+     [2023] Allison Cruikshank, Janet Best, H. Frederick Nijhout, Michael C. Reed."Dynamical Questions in Volume Transmission."
+     <i> Journal of Biological Dynamics. </i> <a href="https://doi.org/10.1080/17513758.2023.2269986">https://doi.org/10.1080/17513758.2023.2269986</a>.
+       <h3 class="w3-left-align">Undergraduate Work </h3>
+  
+      <li><p class="w3-left-align"> 
+     [2023] Madison Albert, Allison Cruikshank, Kausik Das, Luoding Zhu, Jared Barber. Image Digitization
+and Calculation of forces for osteocyte viscoelastic networks.</i>
+      <li><p class="w3-left-align"> 
+     [2023] Archer Harrold, Allison Cruikshank, Bryan Penas, Rebecca Roston. "Introducing High School Biology Students to Biochemistry with a Short, Content-Oriented Intervention." <i>Biochemistry and Molecular
+Biology Education.</i> <a href="https://doi.org/10.1002/bmb.21782">https://doi.org/10.1002/bmb.21782</a>.
+      
+   <!--My papers are also available on my <a href="https://arxiv.org/a/mckean_s_1.html">arXiv page</a>. <!-- Once you put a paper on the arxiv, you can set up a personal link to your papers. As an example, here's mine -->
+  <!--</p>
+    <ol reversed>
+    <li><p class="w3-left-align"><b>The field with no elements</b>.<br>
+          Preprint, 2020.<br>
+        <a class="button w3-skyblue" href="field-no-elements.pdf">pdf</a> <a class="absbutton button w3-skyblue" id="field-no-elements" href="javascript:;">abstract</a> <a class="button w3-skyblue" href="put arXiv link here">arXiv</a></p>
+        <div class="abstract" id="abs-field-no-elements">
+        Here's the abstract for this paper.
+        The abstract button has an id, and that should match the id of the abstract environment that we're writing in. Just add "abs-" in front of the abstract's id.
+        If a field has no elements, is it really a field?
+        </div>
+    </li>
+      <li><p class="w3-left-align"><b>The empty set as a topological space</b>,<br>
+          with Clint Barton and Natasha Romanov.<br>
+          To appear in the <strong>Journal of Unpublishable Math</strong>.<br>
+        <a class="button w3-skyblue" href="empty-set.pdf">pdf</a> <a class="absbutton button w3-skyblue" id="empty-set" href="javascript:;">abstract</a></p>
+        <div class="abstract" id="abs-empty-set">
+        These abstracts are collapsible, which makes them easy to check without taking up too much space.
+        If you don't have an arXiv link yet, you can just delete that button for the time being.
+        Be organized -- you should have your buttons in the same order for each paper.
+        </div>
+    </li> -->
+    </ol> 
+  </div>
+
+  <!-- Teaching -->
+  <div class="w3-container w3-padding-48 w3-content w3-center" style="max-width:1000px;margin-bottom:32px" id="teaching">
+  <h2 class="w3-wide">Teaching</h2>
+  <p class="w3-left-align">
+  <!--You can talk about your teaching philosophy here if you want. -->
+  <!--You may also be interested in getting a <a href="https://gradschool.duke.edu/professional-development/programs/certificate-college-teaching">Certificate in College Teaching</a>. -->
+  </p>
+      <div style="overflow-x:auto">
+      <table class="w3-table w3-striped">
+      <tr>
+        <th>Course</th>
+        <th>Title</th>
+          <th>Term</th>
+        <th>Role</th>
+      </tr>
+        </tr>
+        <tr>
+        <td>Math 111L</td>
+        <td>Calculus 1</td>
+        <td>Fall 2022</td>
+        <td>Instructor of Record</td>
+         <!-- <td><a href="https://services.math.duke.edu/~cbray/">Course website</a>.</td> -->
+       </tr>
+      <tr>
+        <td>Math 111L</td>
+        <td>Calculus 1 Lab</td>
+        <td>Fall 2021</td>
+        <td>Teaching Assistant</td>
+         <!-- <td><a href="https://services.math.duke.edu/~cbray/">Course website</a>.</td> -->
+       </tr>
+       
+     <!--  <tr>
+        <td>Math 123</td>
+        <td>Calculus for Poets</td>
+        <td>Summer 2020</td>
+        <td>Instructor</td>
+        <td>Slides available on request.</td>
+      </tr> -->
+    </table>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-light-grey w3-medium">
+    <div class="w3-container w3-padding-16 w3-content w3-center" style="max-width:1000px">
+    <p class="w3-left-align">
+    <!-- As before, edit your email and office information -->
+    <strong>Email:</strong> <a data-name="allison.crukshank" data-domain="duke" data-tld="edu" href="#" class="cryptedmail" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld"></a><br>
+    <strong>Office:</strong> Gross Hall 304<br>
+    </p>
+    <p class="w3-left-align">
+        Duke University<br>
+      Department of Mathematics<br>
+      Box 90320<br>
+      Durham, NC 27708
+    </p>
+</footer>
+
+</body>
+</html>
